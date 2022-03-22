@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板标签的使用</title>
+</head>
+<body>
+    <h3>if 的使用</h3>
+    {% if var is none %}
+    <p>var 是 none</p>
+    {% else %}
+    <p>var 不是 none</p>
+    {% endif %}
+
+    {% if a is defined %}
+     <p>a定义了</p>
+    {% else %}
+     <p> a 没有定义</p>
+    {% endif %}
+    {% if a == 2 %}
+    <p>a 是 2</p>
+    {% endif %}
+
+    <h3>for循环的使用</h3>
+    {% for item in list_user %}
+        <p>用户名：{{ item.username }}，年龄：{{ item.age }}</p>
+    {% else %}
+        <p>用户信息为空</p>
+    {% endfor %}
+</body>
+</html>
